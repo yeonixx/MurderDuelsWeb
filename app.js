@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// MDValues shared UI helpers — used across every page.
+// MDValues shared UI helpers -- used across every page.
 // Requires js/data.js to be loaded first.
 // ---------------------------------------------------------------------------
 
@@ -20,17 +20,36 @@ function trendArrow(trend) {
   return `<span class="trend flat">—</span>`;
 }
 
+// Maps an item name to the actual icon filename used in the game's asset
+// dump (e.g. "Galaxy Karambit" -> "Galaxykarambiticon1_diff.png",
+// "USA" -> "Usaicon1_diff.png"). Strips spaces/punctuation, keeps the first
+// letter capitalized and lowercases the rest, matching the Guns/Knives
+// folders in the repo.
+function iconFileName(name) {
+  const clean = name.replace(/[^a-zA-Z]/g, "");
+  if (!clean) return "";
+  return clean.charAt(0).toUpperCase() + clean.slice(1).toLowerCase() + "icon1_diff.png";
+}
+
+function iconPath(item) {
+  const folder = item.category === "knife" ? "Knives" : "Guns";
+  return `${folder}/${iconFileName(item.name)}`;
+}
+
 function itemCard(item) {
-  const color = RARITY_COLORS[item.rarity] || "#9ca3af";
+  const color = RARITY_COLORS[item.rarity] || "#9b9b9b";
   const demandLabel = DEMAND_LABELS[item.demand] || "Low";
+  const fallbackSvg = item.category === "knife"
+    ? '<path d="M4 20 14 10M14 10 20 4 22 6 16 12M14 10 12 8"/>'
+    : '<circle cx="9" cy="15" r="5"/><path d="M13 12 20 5M18 3 21 6M9 15h.01"/>';
   return `
     <div class="item-card" style="--rarity-color:${color}">
       <div class="item-icon-wrap">
-        <div class="item-icon">
+        <img class="item-icon-img" src="${iconPath(item)}" alt="${item.name}" loading="lazy"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+        <div class="item-icon" style="display:none">
           <svg viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="1.6">
-            ${item.category === "knife"
-              ? '<path d="M4 20 14 10M14 10 20 4 22 6 16 12M14 10 12 8"/>'
-              : '<circle cx="9" cy="15" r="5"/><path d="M13 12 20 5M18 3 21 6M9 15h.01"/>'}
+            ${fallbackSvg}
           </svg>
         </div>
       </div>
