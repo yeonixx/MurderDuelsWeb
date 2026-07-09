@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — MDValues</title>
+<meta name="description" content="Frequently asked questions about Murder Duels item values and trading.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 64 64" fill="none"><rect x="6" y="6" width="52" height="52" rx="12" fill="#eab308"/><path d="M16 40 L34 20" stroke="#0b0d12" stroke-width="4" stroke-linecap="round"/><path d="M34 20 L46 8 L50 12 L38 24Z" fill="#0b0d12"/></svg>
+      <span class="brand-name">MD<span class="accent">Values</span></span>
+    </a>
+    <button class="nav-toggle">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="knives.html">Knives</a>
+      <a href="revolvers.html">Revolvers</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="trade-ads.html">Trade Ads</a>
+      <a href="value-changes.html">Value Changes</a>
+      <a href="faq.html" class="active">FAQ</a>
+    </div>
+    <a href="#" class="btn btn-primary btn-sm nav-cta" id="discord-cta-nav"></a>
+  </nav>
+</header>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Help</p>
+    <h1>Frequently Asked Questions</h1>
+    <p>Common questions about how values work on this site and how to trade safely.</p>
+  </div>
+</section>
+<section class="block">
+  <div class="container" style="max-width:760px">
+    <div class="faq-item">
+      <h3>Where do these values come from?</h3>
+      <p>Values are estimated from community trading activity, rarity, and how obtainable an item currently is. They're a reference point, not a guaranteed price — actual trades can go higher or lower depending on demand at the time.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why did an item's value change?</h3>
+      <p>Values shift when items are discontinued, when a new case or bundle is released, or when community demand changes. Check the <a href="value-changes.html" style="color:var(--accent)">Value Changes</a> page for a running log with reasons.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is the trade calculator official?</h3>
+      <p>No — it's an independent tool that adds up tracked values on each side of a trade and flags whether it looks fair, an overpay, or an underpay based on a small percentage threshold. Use it as a gut check, not a guarantee.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I actually trade in-game?</h3>
+      <p>Trading happens entirely inside Murder Duels through its in-game trading system. This site doesn't process trades — it's only a values reference and a place to post trade ads.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I avoid getting scammed?</h3>
+      <p>Only trade through the official in-game trade window, double-check every item on both sides before confirming, and be cautious of anyone rushing you, asking you to trade outside the game, or offering deals that look too good to be true.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this site affiliated with Murder Duels or Roblox?</h3>
+      <p>No. This is an independent, fan-made resource built by players, for players. It isn't affiliated with or endorsed by the developers of Murder Duels or by Roblox Corporation.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I suggest a value change or report an error?</h3>
+      <p>Yes — join the Discord and submit proof of a recent trade. This is a placeholder invite link for now; swap in your real Discord URL once you have one.</p>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <svg class="brand-mark" viewBox="0 0 64 64" fill="none"><rect x="6" y="6" width="52" height="52" rx="12" fill="#eab308"/><path d="M16 40 L34 20" stroke="#0b0d12" stroke-width="4" stroke-linecap="round"/><path d="M34 20 L46 8 L50 12 L38 24Z" fill="#0b0d12"/></svg>
+          <span class="brand-name">MD<span class="accent">Values</span></span>
+        </a>
+        <p>An independent, community-driven values resource for Murder Duels traders.</p>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="knives.html">Knives</a>
+        <a href="revolvers.html">Revolvers</a>
+        <a href="calculator.html">Trade Calculator</a>
+        <a href="value-changes.html">Value Changes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="trade-ads.html">Trade Ads</a>
+        <a href="#" id="discord-cta-footer">Join Discord</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © MDValues</span>
+      <span>Not affiliated with or endorsed by the developers of Murder Duels or Roblox Corporation.</span>
+    </div>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  ["discord-cta-nav", "discord-cta-footer"].forEach(id => {
+    const el = document.getElementById(id);
+    if (id !== "discord-cta-footer") el.innerHTML = discordIcon() + " Join Discord";
+    else el.textContent = "Join Discord";
+  });
+</script>
+</body>
+</html>
