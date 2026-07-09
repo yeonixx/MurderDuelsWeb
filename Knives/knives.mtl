@@ -1,0 +1,868 @@
+newmtl Floralicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Floralicon1_diff.png
+map_Kd Floralicon1_diff.png
+map_d Floralicon1_diff.png
+
+newmtl Blueprinticon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Blueprinticon1_diff.png
+map_Kd Blueprinticon1_diff.png
+map_d Blueprinticon1_diff.png
+
+newmtl Skyicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Skyicon1_diff.png
+map_Kd Skyicon1_diff.png
+map_d Skyicon1_diff.png
+
+newmtl Fireworkicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Fireworkicon1_diff.png
+map_Kd Fireworkicon1_diff.png
+map_d Fireworkicon1_diff.png
+
+newmtl Aeroicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Aeroicon1_diff.png
+map_Kd Aeroicon1_diff.png
+map_d Aeroicon1_diff.png
+
+newmtl Megalodonicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Megalodonicon1_diff.png
+map_Kd Megalodonicon1_diff.png
+map_d Megalodonicon1_diff.png
+
+newmtl Cardboardicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Cardboardicon1_diff.png
+map_Kd Cardboardicon1_diff.png
+map_d Cardboardicon1_diff.png
+
+newmtl Berryicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Berryicon1_diff.png
+map_Kd Berryicon1_diff.png
+map_d Berryicon1_diff.png
+
+newmtl Auroraicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Auroraicon1_diff.png
+map_Kd Auroraicon1_diff.png
+map_d Auroraicon1_diff.png
+
+newmtl Libertysedgeicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Libertysedgeicon1_diff.png
+map_Kd Libertysedgeicon1_diff.png
+map_d Libertysedgeicon1_diff.png
+
+newmtl Astronauticon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Astronauticon1_diff.png
+map_Kd Astronauticon1_diff.png
+map_d Astronauticon1_diff.png
+
+newmtl Alienicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Alienicon1_diff.png
+map_Kd Alienicon1_diff.png
+map_d Alienicon1_diff.png
+
+newmtl Baconicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Baconicon1_diff.png
+map_Kd Baconicon1_diff.png
+map_d Baconicon1_diff.png
+
+newmtl Iceicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Iceicon1_diff.png
+map_Kd Iceicon1_diff.png
+map_d Iceicon1_diff.png
+
+newmtl Balisongicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Balisongicon1_diff.png
+map_Kd Balisongicon1_diff.png
+map_d Balisongicon1_diff.png
+
+newmtl Constellationicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Constellationicon1_diff.png
+map_Kd Constellationicon1_diff.png
+map_d Constellationicon1_diff.png
+
+newmtl Cautionicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Cautionicon1_diff.png
+map_Kd Cautionicon1_diff.png
+map_d Cautionicon1_diff.png
+
+newmtl Kawaiiicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Kawaiiicon1_diff.png
+map_Kd Kawaiiicon1_diff.png
+map_d Kawaiiicon1_diff.png
+
+newmtl Cheeseicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Cheeseicon1_diff.png
+map_Kd Cheeseicon1_diff.png
+map_d Cheeseicon1_diff.png
+
+newmtl Cheetahicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Cheetahicon1_diff.png
+map_Kd Cheetahicon1_diff.png
+map_d Cheetahicon1_diff.png
+
+newmtl Cometknifeicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Cometknifeicon1_diff.png
+map_Kd Cometknifeicon1_diff.png
+map_d Cometknifeicon1_diff.png
+
+newmtl Smoochicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Smoochicon1_diff.png
+map_Kd Smoochicon1_diff.png
+map_d Smoochicon1_diff.png
+
+newmtl Cupcakeicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Cupcakeicon1_diff.png
+map_Kd Cupcakeicon1_diff.png
+map_d Cupcakeicon1_diff.png
+
+newmtl Solarisicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Solarisicon1_diff.png
+map_Kd Solarisicon1_diff.png
+map_d Solarisicon1_diff.png
+
+newmtl Robuxicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Robuxicon1_diff.png
+map_Kd Robuxicon1_diff.png
+map_d Robuxicon1_diff.png
+
+newmtl Noobicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Noobicon1_diff.png
+map_Kd Noobicon1_diff.png
+map_d Noobicon1_diff.png
+
+newmtl Defaulticon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Defaulticon1_diff.png
+map_Kd Defaulticon1_diff.png
+map_d Defaulticon1_diff.png
+
+newmtl Traditionalicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Traditionalicon1_diff.png
+map_Kd Traditionalicon1_diff.png
+map_d Traditionalicon1_diff.png
+
+newmtl Seraphimicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Seraphimicon1_diff.png
+map_Kd Seraphimicon1_diff.png
+map_d Seraphimicon1_diff.png
+
+newmtl Divinepinkicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Divinepinkicon1_diff.png
+map_Kd Divinepinkicon1_diff.png
+map_d Divinepinkicon1_diff.png
+
+newmtl Fireicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Fireicon1_diff.png
+map_Kd Fireicon1_diff.png
+map_d Fireicon1_diff.png
+
+newmtl Emokawaiiicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Emokawaiiicon1_diff.png
+map_Kd Emokawaiiicon1_diff.png
+map_d Emokawaiiicon1_diff.png
+
+newmtl Mermaidicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Mermaidicon1_diff.png
+map_Kd Mermaidicon1_diff.png
+map_d Mermaidicon1_diff.png
+
+newmtl Epicfaceicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Epicfaceicon1_diff.png
+map_Kd Epicfaceicon1_diff.png
+map_d Epicfaceicon1_diff.png
+
+newmtl Lunarisicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Lunarisicon1_diff.png
+map_Kd Lunarisicon1_diff.png
+map_d Lunarisicon1_diff.png
+
+newmtl Galaxykarambiticon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Galaxykarambiticon1_diff.png
+map_Kd Galaxykarambiticon1_diff.png
+map_d Galaxykarambiticon1_diff.png
+
+newmtl Glassicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Glassicon1_diff.png
+map_Kd Glassicon1_diff.png
+map_d Glassicon1_diff.png
+
+newmtl Goldenstilettoicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Goldenstilettoicon1_diff.png
+map_Kd Goldenstilettoicon1_diff.png
+map_d Goldenstilettoicon1_diff.png
+
+newmtl Yarnicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Yarnicon1_diff.png
+map_Kd Yarnicon1_diff.png
+map_d Yarnicon1_diff.png
+
+newmtl Usaicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Usaicon1_diff.png
+map_Kd Usaicon1_diff.png
+map_d Usaicon1_diff.png
+
+newmtl Hackericon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Hackericon1_diff.png
+map_Kd Hackericon1_diff.png
+map_d Hackericon1_diff.png
+
+newmtl Licoriceicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Licoriceicon1_diff.png
+map_Kd Licoriceicon1_diff.png
+map_d Licoriceicon1_diff.png
+
+newmtl Karambiticon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Karambiticon1_diff.png
+map_Kd Karambiticon1_diff.png
+map_d Karambiticon1_diff.png
+
+newmtl Kittyconeicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Kittyconeicon1_diff.png
+map_Kd Kittyconeicon1_diff.png
+map_d Kittyconeicon1_diff.png
+
+newmtl Korbloxicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Korbloxicon1_diff.png
+map_Kd Korbloxicon1_diff.png
+map_d Korbloxicon1_diff.png
+
+newmtl Spacekittyicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Spacekittyicon1_diff.png
+map_Kd Spacekittyicon1_diff.png
+map_d Spacekittyicon1_diff.png
+
+newmtl Meteoricon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Meteoricon1_diff.png
+map_Kd Meteoricon1_diff.png
+map_d Meteoricon1_diff.png
+
+newmtl Lmadicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Lmadicon1_diff.png
+map_Kd Lmadicon1_diff.png
+map_d Lmadicon1_diff.png
+
+newmtl Lightningicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Lightningicon1_diff.png
+map_Kd Lightningicon1_diff.png
+map_d Lightningicon1_diff.png
+
+newmtl Moonrockicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Moonrockicon1_diff.png
+map_Kd Moonrockicon1_diff.png
+map_d Moonrockicon1_diff.png
+
+newmtl Pinkskullsicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Pinkskullsicon1_diff.png
+map_Kd Pinkskullsicon1_diff.png
+map_d Pinkskullsicon1_diff.png
+
+newmtl Watermelonicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Watermelonicon1_diff.png
+map_Kd Watermelonicon1_diff.png
+map_d Watermelonicon1_diff.png
+
+newmtl Sabericon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Sabericon1_diff.png
+map_Kd Sabericon1_diff.png
+map_d Sabericon1_diff.png
+
+newmtl Rainbowicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Rainbowicon1_diff.png
+map_Kd Rainbowicon1_diff.png
+map_d Rainbowicon1_diff.png
+
+newmtl Redstilettoicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Redstilettoicon1_diff.png
+map_Kd Redstilettoicon1_diff.png
+map_d Redstilettoicon1_diff.png
+
+newmtl Roseicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Roseicon1_diff.png
+map_Kd Roseicon1_diff.png
+map_d Roseicon1_diff.png
+
+newmtl Rustyicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Rustyicon1_diff.png
+map_Kd Rustyicon1_diff.png
+map_d Rustyicon1_diff.png
+
+newmtl Scalesicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Scalesicon1_diff.png
+map_Kd Scalesicon1_diff.png
+map_d Scalesicon1_diff.png
+
+newmtl Shootingstaricon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Shootingstaricon1_diff.png
+map_Kd Shootingstaricon1_diff.png
+map_d Shootingstaricon1_diff.png
+
+newmtl Spiderwebicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Spiderwebicon1_diff.png
+map_Kd Spiderwebicon1_diff.png
+map_d Spiderwebicon1_diff.png
+
+newmtl Vaporwaveicon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Vaporwaveicon1_diff.png
+map_Kd Vaporwaveicon1_diff.png
+map_d Vaporwaveicon1_diff.png
+
+newmtl Voidreavericon1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+map_Ka Voidreavericon1_diff.png
+map_Kd Voidreavericon1_diff.png
+map_d Voidreavericon1_diff.png
+
