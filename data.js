@@ -1,13 +1,3 @@
-// ---------------------------------------------------------------------------
-// MDValues data
-// Real Murder Duels knife & revolver skin names, matched to the game's
-// actual rarity tiers and colors (pulled from the game's own RarityUtil
-// module: Common/Uncommon/Rare/Epic/Legendary/Secret). Value/demand/trend
-// numbers are still placeholders (deterministically generated) -- swap in
-// real trade values whenever you have them; every page pulls from this one
-// file, so nothing else needs to change.
-// ---------------------------------------------------------------------------
-
 const RARITY_ORDER = ["Secret", "Legendary", "Epic", "Rare", "Uncommon", "Common"];
 
 // exact colors from the game's rarity module (Color3.fromRGB -> hex)
