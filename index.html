@@ -130,7 +130,14 @@
     <div class="cta-banner">
       <h2>Want to request a value change?</h2>
       <p>Join the Discord to submit proof of a trade and help keep values accurate for everyone.</p>
-      <a href="#" class="btn btn-primary" id="discord-cta-banner"></a>
+
+      <a href="https://discord.gg/aqRGHdgxYh"
+         class="btn btn-primary"
+         id="discord-cta-banner"
+         target="_blank"
+         rel="noopener noreferrer">
+        Join Our Discord
+      </a>
     </div>
   </div>
 </section>
@@ -171,11 +178,23 @@
 <script src="app.js"></script>
 <script>
   // Discord CTAs — replace "#" with your real invite link
-  ["discord-cta-nav", "discord-cta-hero", "discord-cta-banner", "discord-cta-footer"].forEach(id => {
+const discordInvite = "https://discord.gg/aqRGHdgxYh";
+
+["discord-cta-nav", "discord-cta-hero", "discord-cta-banner", "discord-cta-footer"].forEach(id => {
     const el = document.getElementById(id);
-    if (id !== "discord-cta-footer") el.innerHTML = discordIcon() + " Join Discord";
-    else el.textContent = "Join Discord";
-  });
+
+    // Set the link
+    el.href = discordInvite;
+    el.target = "_blank";
+    el.rel = "noopener noreferrer";
+
+    // Set the text
+    if (id !== "discord-cta-footer") {
+        el.innerHTML = discordIcon() + " Join Discord";
+    } else {
+        el.textContent = "Join Discord";
+    }
+});
   document.getElementById("refresh-time").textContent = new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
   // stats
   document.getElementById("stat-count").textContent = ITEMS.length;
