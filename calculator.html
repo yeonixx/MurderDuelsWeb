@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade Calculator — MDValues</title>
+<meta name="description" content="Weigh both sides of a Murder Duels trade against current tracked values.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="MD_VALUES.png" alt="Murder Duels logo">
+      <span class="brand-name">MD<span class="accent">Values</span></span>
+    </a>
+    <button class="nav-toggle">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="knives.html">Knives</a>
+      <a href="revolvers.html">Revolvers</a>
+      <a href="calculator.html" class="active">Calculator</a>
+      <a href="trade-ads.html">Trade Ads</a>
+      <a href="value-changes.html">Value Changes</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="#" class="btn btn-primary btn-sm nav-cta" id="discord-cta-nav"></a>
+  </nav>
+</header>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Trade Tools</p>
+    <h1>Trade Calculator</h1>
+    <p>Add what you're giving to one side and what you're getting to the other. We'll total both sides against tracked values and tell you if it's a fair trade.</p>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <div class="calc-grid">
+      <div class="calc-side">
+        <h3>Your Side</h3>
+        <select class="calc-select" id="pick-a"></select>
+        <div class="calc-picker" id="list-a"></div>
+        <div class="calc-total">Total: <span id="total-a">0</span></div>
+      </div>
+      <div class="calc-vs">VS</div>
+      <div class="calc-side">
+        <h3>Their Side</h3>
+        <select class="calc-select" id="pick-b"></select>
+        <div class="calc-picker" id="list-b"></div>
+        <div class="calc-total">Total: <span id="total-b">0</span></div>
+      </div>
+    </div>
+    <div class="verdict fair" id="verdict">
+      <div class="verdict-title" id="verdict-title">Add items to begin</div>
+      <div class="verdict-sub" id="verdict-sub">The calculator updates automatically as you add items to either side.</div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img class="brand-mark" src="MD_VALUES.png" alt="Murder Duels logo">
+          <span class="brand-name">MD<span class="accent">Values</span></span>
+        </a>
+        <p>An independent, community-driven values resource for Murder Duels traders.</p>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="knives.html">Knives</a>
+        <a href="revolvers.html">Revolvers</a>
+        <a href="calculator.html">Trade Calculator</a>
+        <a href="value-changes.html">Value Changes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="trade-ads.html">Trade Ads</a>
+        <a href="#" id="discord-cta-footer">Join Discord</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © MDValues</span>
+      <span>Not affiliated with or endorsed by the developers of Murder Duels or Roblox Corporation.</span>
+    </div>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  ["discord-cta-nav", "discord-cta-footer"].forEach(id => {
+    const el = document.getElementById(id);
+    if (id !== "discord-cta-footer") el.innerHTML = discordIcon() + " Join Discord";
+    else el.textContent = "Join Discord";
+  });
+</script>
+<script>
+  const sideA = [];
+  const sideB = [];
+  function populateSelect(sel) {
+    sel.innerHTML = `<option value="">+ Add an item…</option>` +
+      ITEMS.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(i => `<option value="${i.id}">${i.name} (${i.rarity} — ${fmt(i.value)})</option>`).join("");
+  }
+  populateSelect(document.getElementById("pick-a"));
+  populateSelect(document.getElementById("pick-b"));
+  function renderSide(list, listEl, totalEl) {
+    if (!list.length) {
+      listEl.innerHTML = `<div class="empty-state">No items added yet.</div>`;
+    } else {
+      listEl.innerHTML = list.map((id, idx) => {
+        const item = getItem(id);
+        return `<div class="calc-item-row">
+          <span>${item.name} <span style="color:var(--text-dim)">— ${fmt(item.value)}</span></span>
+          <button class="rm" data-idx="${idx}">✕</button>
+        </div>`;
+      }).join("");
+    }
+    const total = list.reduce((sum, id) => sum + getItem(id).value, 0);
+    totalEl.textContent = fmt(total);
+    return total;
+  }
+  function update() {
+    const totalA = renderSide(sideA, document.getElementById("list-a"), document.getElementById("total-a"));
+    const totalB = renderSide(sideB, document.getElementById("list-b"), document.getElementById("total-b"));
+    updateVerdict(totalA, totalB);
+    document.querySelectorAll("#list-a .rm").forEach(btn => btn.addEventListener("click", () => { sideA.splice(+btn.dataset.idx, 1); update(); }));
+    document.querySelectorAll("#list-b .rm").forEach(btn => btn.addEventListener("click", () => { sideB.splice(+btn.dataset.idx, 1); update(); }));
+  }
+  function updateVerdict(totalA, totalB) {
+    const verdictEl = document.getElementById("verdict");
+    const titleEl = document.getElementById("verdict-title");
+    const subEl = document.getElementById("verdict-sub");
+    if (totalA === 0 && totalB === 0) {
+      verdictEl.className = "verdict fair";
+      titleEl.textContent = "Add items to begin";
+      subEl.textContent = "The calculator updates automatically as you add items to either side.";
+      return;
+    }
+    const diff = totalB - totalA;
+    const base = Math.max(totalA, totalB, 1);
+    const pct = Math.abs(diff) / base * 100;
+    if (pct <= 5) {
+      verdictEl.className = "verdict fair";
+      titleEl.textContent = "Fair Trade";
+      subEl.textContent = `Both sides are within ${pct.toFixed(1)}% of each other.`;
+    } else if (diff > 0) {
+      verdictEl.className = "verdict under";
+      titleEl.textContent = "You're Underpaying";
+      subEl.textContent = `Their side is worth ${fmt(diff)} more (${pct.toFixed(1)}% difference). They may want an add-on.`;
+    } else {
+      verdictEl.className = "verdict over";
+      titleEl.textContent = "You're Overpaying";
+      subEl.textContent = `Your side is worth ${fmt(Math.abs(diff))} more (${pct.toFixed(1)}% difference). Consider asking for an add-on.`;
+    }
+  }
+  document.getElementById("pick-a").addEventListener("change", (e) => {
+    if (e.target.value) { sideA.push(e.target.value); e.target.value = ""; update(); }
+  });
+  document.getElementById("pick-b").addEventListener("change", (e) => {
+    if (e.target.value) { sideB.push(e.target.value); e.target.value = ""; update(); }
+  });
+  update();
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MDValues — Murder Duels Item Values</title>
+<meta name="description" content="Community-updated trade values for every knife and revolver in Murder Duels on Roblox. Trade calculator, value history, and trade ads.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="MD_VALUES.png" alt="Murder Duels logo">
+      <span class="brand-name">MD<span class="accent">Values</span></span>
+    </a>
+    <button class="nav-toggle">Menu</button>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="knives.html">Knives</a>
+      <a href="revolvers.html">Revolvers</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="trade-ads.html">Trade Ads</a>
+      <a href="value-changes.html">Value Changes</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="#" class="btn btn-primary btn-sm nav-cta" id="discord-cta-nav"></a>
+  </nav>
+</header>
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow-pill"><span class="dot"></span> Community-updated values</div>
+    <h1>Know what your <span class="accent">Murder Duels</span> skin is really worth</h1>
+    <p class="lede">Trade values for every knife and revolver skin, a trade calculator that checks both sides instantly, and a live trade ad board — all in one place.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn btn-primary" id="discord-cta-hero"></a>
+      <a href="knives.html" class="btn btn-ghost">Browse Values</a>
+    </div>
+    <div class="hero-refresh">Last refresh: <span id="refresh-time"></span></div>
+  </div>
+</section>
+<section class="stat-strip">
+  <div class="container">
+    <div class="stat">
+      <div class="stat-value" id="stat-count">--</div>
+      <div class="stat-label">Tracked Items</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="stat-highest">--</div>
+      <div class="stat-label">Highest Value</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="stat-rising">--</div>
+      <div class="stat-label">Rising This Week</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="stat-changes">--</div>
+      <div class="stat-label">Recent Value Changes</div>
+    </div>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Just Tracked</p>
+        <h2>Newest Skins</h2>
+      </div>
+      <a href="knives.html" class="btn btn-ghost btn-sm">View All →</a>
+    </div>
+    <div class="grid" id="newest-grid"></div>
+  </div>
+</section>
+<section class="block alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Market Movement</p>
+        <h2>Latest Value Changes</h2>
+      </div>
+      <a href="value-changes.html" class="btn btn-ghost btn-sm">View All →</a>
+    </div>
+    <div id="changes-preview"></div>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Why MDValues</p>
+        <h2>Tools to help you trade smarter</h2>
+      </div>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M7 16l3-6 3 4 3-8"/></svg></div>
+        <h3>Trade Calculator</h3>
+        <p>Compare both sides of a trade instantly and get a fair / overpay / underpay read.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg></div>
+        <h3>Value History</h3>
+        <p>Track how values move over time and spot trends before they peak.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3>Full Weapon Database</h3>
+        <p>Every knife and revolver skin across all rarities, in one searchable place.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <h3>Community Driven</h3>
+        <p>Values are reviewed by active traders — flag anything that looks off.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></div>
+        <h3>Demand Tracking</h3>
+        <p>See at a glance whether an item is Hype, High, Medium, or Low demand.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Trade Ads</h3>
+        <p>Post what you're offering and wanting, and browse open trade ads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Want to request a value change?</h2>
+      <p>Join the Discord to submit proof of a trade and help keep values accurate for everyone.</p>
+      <a href="#" class="btn btn-primary" id="discord-cta-banner"></a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img class="brand-mark" src="MD_VALUES.png" alt="Murder Duels logo">
+          <span class="brand-name">MD<span class="accent">Values</span></span>
+        </a>
+        <p>An independent, community-driven values resource for Murder Duels traders.</p>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="knives.html">Knives</a>
+        <a href="revolvers.html">Revolvers</a>
+        <a href="calculator.html">Trade Calculator</a>
+        <a href="value-changes.html">Value Changes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="trade-ads.html">Trade Ads</a>
+        <a href="#" id="discord-cta-footer">Join Discord</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © MDValues</span>
+      <span>Not affiliated with or endorsed by the developers of Murder Duels or Roblox Corporation.</span>
+    </div>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  // Discord CTAs — replace "#" with your real invite link
+  ["discord-cta-nav", "discord-cta-hero", "discord-cta-banner", "discord-cta-footer"].forEach(id => {
+    const el = document.getElementById(id);
+    if (id !== "discord-cta-footer") el.innerHTML = discordIcon() + " Join Discord";
+    else el.textContent = "Join Discord";
+  });
+  document.getElementById("refresh-time").textContent = new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  // stats
+  document.getElementById("stat-count").textContent = ITEMS.length;
+  document.getElementById("stat-highest").textContent = fmt(Math.max(...ITEMS.map(i => i.value)));
+  document.getElementById("stat-rising").textContent = ITEMS.filter(i => i.trend === "up").length;
+  document.getElementById("stat-changes").textContent = VALUE_CHANGES.length;
+  // newest skins: last 8 items in the data file
+  renderGrid(document.getElementById("newest-grid"), ITEMS.slice(-8));
+  // value change preview: top 4
+  const changesEl = document.getElementById("changes-preview");
+  changesEl.innerHTML = VALUE_CHANGES.slice(0, 4).map(c => {
+    const item = getItem(c.id);
+    const up = c.to >= c.from;
+    const pct = (((c.to - c.from) / c.from) * 100).toFixed(1);
+    return `<div class="change-row">
+      <span class="change-date">${c.date}</span>
+      <span>
+        <span class="change-name">${item.name}</span><br>
+        <span class="change-reason">${c.reason}</span>
+      </span>
+      <span class="tag-value">${fmt(c.from)} → ${fmt(c.to)}</span>
+      <span class="change-move ${up ? "up" : "down"}">${up ? "▲" : "▼"} ${Math.abs(pct)}%</span>
+    </div>`;
+  }).join("");
+</script>
+</body>
+</html>

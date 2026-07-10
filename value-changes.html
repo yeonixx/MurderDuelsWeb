@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Value Changes — MDValues</title>
+<meta name="description" content="A running log of recent Murder Duels value changes and why they happened.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="MD_VALUES.png" alt="Murder Duels logo">
+      <span class="brand-name">MD<span class="accent">Values</span></span>
+    </a>
+    <button class="nav-toggle">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="knives.html">Knives</a>
+      <a href="revolvers.html">Revolvers</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="trade-ads.html">Trade Ads</a>
+      <a href="value-changes.html" class="active">Value Changes</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="#" class="btn btn-primary btn-sm nav-cta" id="discord-cta-nav"></a>
+  </nav>
+</header>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Market Movement</p>
+    <h1>Value Changes</h1>
+    <p>A running log of recent value updates and why they happened. Have proof a value is outdated? Join the Discord and submit it.</p>
+  </div>
+</section>
+<section class="block">
+  <div class="container" style="max-width:820px">
+    <div id="changes-list"></div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img class="brand-mark" src="MD_VALUES.png" alt="Murder Duels logo">
+          <span class="brand-name">MD<span class="accent">Values</span></span>
+        </a>
+        <p>An independent, community-driven values resource for Murder Duels traders.</p>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="knives.html">Knives</a>
+        <a href="revolvers.html">Revolvers</a>
+        <a href="calculator.html">Trade Calculator</a>
+        <a href="value-changes.html">Value Changes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="trade-ads.html">Trade Ads</a>
+        <a href="#" id="discord-cta-footer">Join Discord</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © MDValues</span>
+      <span>Not affiliated with or endorsed by the developers of Murder Duels or Roblox Corporation.</span>
+    </div>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  ["discord-cta-nav", "discord-cta-footer"].forEach(id => {
+    const el = document.getElementById(id);
+    if (id !== "discord-cta-footer") el.innerHTML = discordIcon() + " Join Discord";
+    else el.textContent = "Join Discord";
+  });
+</script>
+<script>
+  const listEl = document.getElementById("changes-list");
+  listEl.innerHTML = VALUE_CHANGES.map(c => {
+    const item = getItem(c.id);
+    const up = c.to >= c.from;
+    const pct = (((c.to - c.from) / c.from) * 100).toFixed(1);
+    return `<div class="change-row">
+      <span class="change-date">${c.date}</span>
+      <span>
+        <span class="change-name">${item.name}</span><br>
+        <span class="change-reason">${c.reason}</span>
+      </span>
+      <span class="tag-value">${fmt(c.from)} → ${fmt(c.to)}</span>
+      <span class="change-move ${up ? "up" : "down"}">${up ? "▲" : "▼"} ${Math.abs(pct)}%</span>
+    </div>`;
+  }).join("");
+</script>
+</body>
+</html>

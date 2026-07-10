@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade Ads — MDValues</title>
+<meta name="description" content="Post and browse trade ads for Murder Duels.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="MD_VALUES.png" alt="Murder Duels logo">
+      <span class="brand-name">MD<span class="accent">Values</span></span>
+    </a>
+    <button class="nav-toggle">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="knives.html">Knives</a>
+      <a href="revolvers.html">Revolvers</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="trade-ads.html" class="active">Trade Ads</a>
+      <a href="value-changes.html">Value Changes</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="#" class="btn btn-primary btn-sm nav-cta" id="discord-cta-nav"></a>
+  </nav>
+</header>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Open Board</p>
+    <h1>Trade Ads</h1>
+    <p>Post what you're offering and what you're after. <strong>Heads up:</strong> this v1 saves ads in your own browser only, so ads won't be visible to other visitors yet — see the note below.</p>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <div class="ad-form">
+      <div class="row">
+        <div>
+          <label for="f-user">Roblox Username</label>
+          <input id="f-user" type="text" placeholder="e.g. Suspect_07" maxlength="40">
+        </div>
+        <div>
+          <label for="f-offering">Offering</label>
+          <input id="f-offering" type="text" placeholder="e.g. Widow's Kiss" maxlength="120">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="f-wanting">Wanting</label>
+          <input id="f-wanting" type="text" placeholder="e.g. Judge & Jury + add-ons" maxlength="120">
+        </div>
+        <div>
+          <label for="f-notes">Notes (optional)</label>
+          <input id="f-notes" type="text" placeholder="e.g. Open to offers" maxlength="140">
+        </div>
+      </div>
+      <button class="btn btn-primary" id="post-btn" type="button">Post Trade Ad</button>
+    </div>
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Live Board</p>
+        <h2>Open Trade Ads</h2>
+      </div>
+      <button class="btn btn-ghost btn-sm" id="clear-btn" type="button">Clear My Ads</button>
+    </div>
+    <div id="ad-list"></div>
+  </div>
+</section>
+<section class="block alt">
+  <div class="container">
+    <p class="eyebrow">Roadmap Note</p>
+    <h2 style="font-size:20px;margin:0 0 10px">Making this board shared across visitors</h2>
+    <p style="color:var(--text-dim);max-width:70ch">Right now trade ads are stored only in your own browser (via <code>localStorage</code>), so this works as a personal scratchpad but two different visitors won't see each other's posts. To make it a real shared board, this page needs a small backend — a database table for ads plus an API to create/list/expire them (e.g. Supabase, Firebase, or a lightweight Postgres service). That's the natural next build step once the rest of the site is live.</p>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img class="brand-mark" src="MD_VALUES.png" alt="Murder Duels logo">
+          <span class="brand-name">MD<span class="accent">Values</span></span>
+        </a>
+        <p>An independent, community-driven values resource for Murder Duels traders.</p>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="knives.html">Knives</a>
+        <a href="revolvers.html">Revolvers</a>
+        <a href="calculator.html">Trade Calculator</a>
+        <a href="value-changes.html">Value Changes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="trade-ads.html">Trade Ads</a>
+        <a href="#" id="discord-cta-footer">Join Discord</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © MDValues</span>
+      <span>Not affiliated with or endorsed by the developers of Murder Duels or Roblox Corporation.</span>
+    </div>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  ["discord-cta-nav", "discord-cta-footer"].forEach(id => {
+    const el = document.getElementById(id);
+    if (id !== "discord-cta-footer") el.innerHTML = discordIcon() + " Join Discord";
+    else el.textContent = "Join Discord";
+  });
+</script>
+<script>
+  const STORAGE_KEY = "md_trade_ads_v1";
+  function loadAds() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      return [];
+    }
+  }
+  function saveAds(ads) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(ads));
+  }
+  function renderAds() {
+    const ads = loadAds();
+    const listEl = document.getElementById("ad-list");
+    if (!ads.length) {
+      listEl.innerHTML = `<div class="empty-state">No trade ads posted yet. Be the first — fill out the form above.</div>`;
+      return;
+    }
+    listEl.innerHTML = ads.slice().reverse().map(ad => `
+      <div class="ad-card">
+        <div class="ad-card-top">
+          <span>${ad.user || "Anonymous"}</span>
+          <span>${new Date(ad.ts).toLocaleString()}</span>
+        </div>
+        <div class="ad-card-body">
+          <strong>Offering:</strong> ${escapeHtml(ad.offering)}<br>
+          <strong>Wanting:</strong> ${escapeHtml(ad.wanting)}
+          ${ad.notes ? `<br><strong>Notes:</strong> ${escapeHtml(ad.notes)}` : ""}
+        </div>
+      </div>
+    `).join("");
+  }
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+  document.getElementById("post-btn").addEventListener("click", () => {
+    const offering = document.getElementById("f-offering").value.trim();
+    const wanting = document.getElementById("f-wanting").value.trim();
+    if (!offering || !wanting) {
+      alert("Fill in at least what you're offering and what you're wanting.");
+      return;
+    }
+    const ads = loadAds();
+    ads.push({
+      user: document.getElementById("f-user").value.trim(),
+      offering,
+      wanting,
+      notes: document.getElementById("f-notes").value.trim(),
+      ts: Date.now(),
+    });
+    saveAds(ads);
+    ["f-user", "f-offering", "f-wanting", "f-notes"].forEach(id => document.getElementById(id).value = "");
+    renderAds();
+  });
+  document.getElementById("clear-btn").addEventListener("click", () => {
+    if (confirm("Clear all trade ads stored in this browser?")) {
+      saveAds([]);
+      renderAds();
+    }
+  });
+  renderAds();
+</script>
+</body>
+</html>
