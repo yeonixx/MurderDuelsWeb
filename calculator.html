@@ -93,10 +93,17 @@
 <script src="data.js"></script>
 <script src="app.js"></script>
 <script>
+  const discordInvite = "https://discord.gg/aqRGHdgxYh";
   ["discord-cta-nav", "discord-cta-footer"].forEach(id => {
     const el = document.getElementById(id);
-    if (id !== "discord-cta-footer") el.innerHTML = discordIcon() + " Join Discord";
-    else el.textContent = "Join Discord";
+    el.href = discordInvite;
+    el.target = "_blank";
+    el.rel = "noopener noreferrer";
+    if (id !== "discord-cta-footer") {
+        el.innerHTML = discordIcon() + " Join Discord";
+    } else {
+        el.textContent = "Join Discord";
+    }
   });
 </script>
 <script>
