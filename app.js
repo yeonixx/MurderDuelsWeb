@@ -1,7 +1,3 @@
-// ---------------------------------------------------------------------------
-// MDValues shared UI helpers -- used across every page.
-// Requires js/data.js to be loaded first.
-// ---------------------------------------------------------------------------
 
 function fmt(n) {
   if (n === undefined || n === null || Number.isNaN(n)) return "--";
